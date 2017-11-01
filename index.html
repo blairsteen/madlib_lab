@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  </head>
+  <body ng-app>
+    <div>
+      <label>Name:</label>
+      <input type="text" ng-model="adjective" placeholder="Enter an adjective">
+      <input type="number" ng-model="number" placeholder="Enter an number">
+      <input type="number" ng-model="number2" placeholder="Enter an number">
+      <input type="text" ng-model="noun" placeholder="Enter a noun">
+      <input type="text" ng-model="noun2" placeholder="Enter a noun">
+      <hr>
+      <h1>Weather forecast: Today is going to start as a <span ng-if="adjective">{{adjective | lowercase}}</span><span ng-if="!adjective">_____________</span> day with a high of <span ng-if="number && number2">{{number + number2}}</span><span ng-if="!number || !number2">_____________</span>, then in the afternoon we'll begin to see a <span ng-if="noun">{{noun | lowercase}}</span><span ng-if="!noun">_____________</span> roll in creating a chance of <span ng-if="noun2">{{noun2 | lowercase}}</span><span ng-if="!noun2">_____________</span> in the evening. 
+      </h1>
+      <hr>
+    </div>
+  </body>
+</html>
